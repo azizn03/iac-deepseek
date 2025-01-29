@@ -10,4 +10,5 @@ This project automates the deployment of a DeepSeek instance in AWS, integrated 
 - [ ] Complete IaC Implementation  
 - [ ] Containerize Application  
 - [ ] Integrate CI/CD for accessibility
-- [ ] Implement principle of least privilege 
+- [ ] Implement principle of least privilege
+- [ ] Implement AWS SageMaker integration in the future?
