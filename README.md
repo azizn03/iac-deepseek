@@ -8,15 +8,16 @@ This project automates the deployment of a DeepSeek instance in AWS, integrated 
 
 ## Setup
 
-### Export AWS credentials 
+## Export AWS credentials
 ```bash
 export AWS_ACCESS_KEY_ID="anaccesskey"
 export AWS_SECRET_ACCESS_KEY="asecretkey"
+export AWS_REGION="your_prefered_region"
 ```
 
 ## ✅ To-Do List  
-- [ ] Complete IaC Implementation  
+- [ ] Complete IaC Implementation   
 - [ ] Integrate CI/CD for accessibility
 - [ ] Implement principle of least privilege
 - [ ] Automate the generation of a self-signed certificate for HTTPS access
-- [ ] Implement AWS SageMaker integration in the future?
+- [ ] Implement AWS SageMaker integration in the future?d

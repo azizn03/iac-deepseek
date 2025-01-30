@@ -26,11 +26,6 @@ data "aws_ami" "amazon_linux_2" {
     }
   }
 
-  data "aws_availability_zones" "available" {
+  data "aws_availability_zones" "availablezones" {
   state = "available"
-
-filter {
-  name = "region-name"
-  values = "us-east-1"
-  }
 }
