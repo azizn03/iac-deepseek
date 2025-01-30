@@ -25,3 +25,12 @@ data "aws_ami" "amazon_linux_2" {
     values = ["x86_64"]
     }
   }
+
+  data "aws_availability_zones" "available" {
+  state = "available"
+
+filter {
+  name = "region-name"
+  values = "us-east-1"
+  }
+}
