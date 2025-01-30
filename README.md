@@ -22,4 +22,4 @@ terraform apply
 - [ ] Integrate CI/CD for accessibility
 - [ ] Implement principle of least privilege
 - [ ] Automate the generation of a self-signed certificate for HTTPS access
-- [ ] Implement AWS SageMaker integration in the future?d
+- [ ] Implement AWS SageMaker integration in the future?
