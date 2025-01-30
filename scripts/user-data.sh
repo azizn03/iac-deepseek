@@ -71,6 +71,7 @@ main(){
     driver_setup
     verify_driver_setup
     setup_docker
+    nvdia_drivers_docker
     ollama_setup
 }
 
