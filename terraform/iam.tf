@@ -14,6 +14,7 @@ resource "aws_iam_policy" "S3FullAccess" {
   description = "Grants full access to S3"
 
   policy = jsonencode({
+    Version = "2012-10-17"
     Statement = [
       {
         Effect   = "Allow"

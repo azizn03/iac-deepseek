@@ -13,6 +13,7 @@ provider "aws" {
       tags = {
         Terraform = "TRUE"
         projectResources = "DEEPSEEK"
+        Environment = "DEV"
       }
     }
 }

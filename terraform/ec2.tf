@@ -2,7 +2,7 @@ resource "aws_instance" "deepseek_ec2" {
   ami                         = data.aws_ami.amazon_linux_2.id
   instance_type               = "g4dn.xlarge"
   iam_instance_profile        = aws_iam_instance_profile.ec2ds_instance_profile.name
-  subnet_id                   = aws_subnet.main.id
+  subnet_id                   = aws_subnet.dssg-subneta.id
   vpc_security_group_ids      = [aws_security_group.deepseek_sg.id]
   user_data                   = file("../scripts/user-data.sh")
   
