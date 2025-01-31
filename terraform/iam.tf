@@ -25,6 +25,11 @@ resource "aws_iam_policy" "S3FullAccess" {
   })
 }
 
+resource "aws_s3_bucket_policy" "ds_alb_s3_policy" {
+    bucket = aws_s3_bucket.ds_alb_s3_log.id
+    policy = data.aws_iam_policy_document.ds_alb_s3_policy.json
+}
+
 resource "aws_iam_role_policy_attachment" "S3FullAccess-policy-attach" {
   role       = aws_iam_role.ec2ds_role.name
   policy_arn = aws_iam_policy.S3FullAccess.arn

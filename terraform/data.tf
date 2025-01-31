@@ -26,6 +26,26 @@ data "aws_ami" "amazon_linux_2" {
     }
   }
 
+  data "aws_iam_policy_document" "ds_alb_s3_policy" {
+  statement {
+    principals {
+      type        = "AWS"
+      identifiers = [data.aws_elb_service_account.main.arn]
+    }
+
+    actions = [
+      "s3:PutObject"
+    ]
+
+    resources = [
+      "${aws_s3_bucket.ds_alb_s3_log.arn}/dev/AWSLogs/*",
+    ]
+  }
+}
+
   data "aws_availability_zones" "availablezones" {
   state = "available"
 }
+
+  data "aws_elb_service_account" "main" {}
+
